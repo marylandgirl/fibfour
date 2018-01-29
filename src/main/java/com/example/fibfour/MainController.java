@@ -19,6 +19,8 @@ public class MainController {
         int count = 20;
 
         System.out.print(n1 + " " + n2 + " " + n3 + " "  +n4 + " ");
+        StringBuffer str = new StringBuffer();
+        str.append(n1 + " " + n2 + " " + n3 + " "  +n4 + " " );
         for(int i=4;i<count;++i)
         {
 
@@ -28,11 +30,12 @@ public class MainController {
             n3=n4;
             n4=n5;
             System.out.print(" "+n5);
+            str.append(" " + n5);
         }
 
 //        System.out.println(n1 + " " + n2 + " " + n3 + " " + n4);
 
-        return "";
+        return str.toString();
 
     }
 }
