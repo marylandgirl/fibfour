@@ -10,10 +10,13 @@ public class MainController {
     @RequestMapping("/")
     public String printFibSums(@RequestParam int number) {
 
+        if (number < 5) {
+            return number + " " + number + " " + number + " " + number;
+        }
         int n1 = number;
-        int n2 = number + 1;
-        int n3 = number + 2;
-        int n4 = number + 3;
+        int n2 = number - 1;
+        int n3 = number - 2;
+        int n4 = number - 3;
         int n5;
 
         int count = 20;
